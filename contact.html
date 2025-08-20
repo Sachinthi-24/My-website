@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - My Portfolio</title>
+  <link rel="stylesheet" href="style1.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">Portfolio</a>
+    <nav class="navbar">
+      <a href="index1.html" style="--i:1" class="active">Home</a>
+      <a href="blog.html" style="--i:2">Blog</a>
+      <a href="contact.html" style="--i:3">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact" id="contact">
+    <div class="contact-text">
+      <h2>Contact <span>Me</span></h2>
+      <h4>Let's Work Together</h4>
+      <p>If you'd like to connect, collaborate, or have any questions, feel free to reach out!
+        I'm always open to new opportunities, feedback, or just a friendly chat. You can contact
+        me via the form below or through my social media links. Looking forward to hearing from you!</p>
+
+      <div class="contact-list">
+        <li><i class='bx bxs-send'></i> contact@gmail.com</li>
+        <li><i class='bx bxs-phone-call'></i> 0123456789</li>
+      </div>
+
+      <div class="contact-icons">
+        <a href="#" aria-label="Facebook"><i class='bx bxl-facebook-circle'></i></a>
+        <a href="#" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+        <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+        <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <form id="contactForm">
+        <label>
+          Name:
+          <input type="text" name="name" placeholder="Enter Your Name" required>
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" placeholder="Enter Your Email" required>
+        </label>
+        <label>
+          Subject:
+          <input type="text" name="subject" placeholder="Enter Your Subject">
+        </label>
+        <label>
+          Message:
+          <textarea name="message" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+        </label>
+        <input type="submit" value="Submit" class="send">
+      </form>
+
+      
+      <div id="formMessage" class="form-message"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2025 Sachinthi Dilshanki. All rights reserved.</p>
+  </footer>
+
+  <script>
+    
+   document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault(); 
+
+  const msg = document.getElementById("formMessage");
+
+  
+  msg.textContent = "✅ Thank you! Your message has been sent.";
+  msg.className = "form-message success"; 
+  msg.style.display = "block";
+
+  this.reset(); 
+  setTimeout(() => {
+    msg.style.display = "none";
+  }, 5000);
+});
+
+  </script>
+</body>
+</html>
